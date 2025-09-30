@@ -1,0 +1,32 @@
+table paintColors {
+  id int [pk]
+  color varchar
+  price decimal
+}
+
+table interiorColors {
+  id int [pk]
+  material varchar
+  price decimal
+}
+
+table techPackages {
+  id int [pk]
+  package varchar
+  price decimal
+}
+
+table wheels {
+  id int [pk]
+  style varchar
+  price decimal
+}
+
+table orders {
+  id int [pk]
+  timeStamp time
+  paintId int [ref: > paintColors.id]
+  interiorId int [ref: > interiorColors.id]
+  techId int [ref: > techPackages.id]
+  wheelId int [ref: > wheels.id]
+}

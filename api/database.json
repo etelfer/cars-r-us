@@ -1,0 +1,32 @@
+{
+  "paintColors": [
+    { "id": 1, "color": "Silver", "price": 400.00 },
+    { "id": 2, "color": "Midnight Blue", "price": 550.50 },
+    { "id": 3, "color": "Firebrick Red", "price": 625.00 },
+    { "id": 4, "color": "Spring Green", "price": 575.75 }
+  ],
+
+  "interiorColors": [
+    { "id": 1, "material": "Beige Fabric", "price": 250.00 },
+    { "id": 2, "material": "Charcoal Fabric", "price": 250.00 },
+    { "id": 3, "material": "White Leather", "price": 1200.50 },
+    { "id": 4, "material": "Black Leather", "price": 1350.00 }
+  ],
+
+  "techPackages": [
+    { "id": 1, "package": "Basic Package", "price": 450.00 },
+    { "id": 2, "package": "Navigation Package", "price": 850.50 },
+    { "id": 3, "package": "Visibility Package", "price": 975.00 },
+    { "id": 4, "package": "Ultra Package", "price": 1750.25 }
+
+  ],
+
+  "wheels": [
+    { "id": 1, "style": "17-inch Pair Radial", "price": 800.00 },
+    { "id": 2, "style": "17-inch Pair Radial Black", "price": 950.50 },
+    { "id": 3, "style": "18-inch Pair Spoke Silver", "price": 1400.00 },
+    { "id": 4, "style": "18-inch Pair Spoke Black", "price": 1650.25 }
+  ],
+  
+  "orders": []
+}

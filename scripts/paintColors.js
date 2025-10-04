@@ -1,8 +1,8 @@
+import { setPaintChoice } from "./transientState.js"
+
 export const PaintOptions = async () => {
     const response = await fetch("http://localhost:8088/paintColors")
     const paintColors = await response.json()
-
-        document.addEventListener("change", handlePaintColorChoice)
 
     const paintColorsHTML = paintColors.map((paintColor => {
         return `<input type="radio" name="paintColor" value=${paintColor.id} /> ${paintColor.color}`
@@ -14,6 +14,8 @@ export const PaintOptions = async () => {
 const handlePaintColorChoice = (event) => {
 
     if (event.target.name === "paintColor") {
-        setStyleChoice(event.target.value)
+        setPaintChoice(event.target.value)
     }
 }
+
+document.addEventListener("change", handlePaintColorChoice)

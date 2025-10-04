@@ -36,7 +36,7 @@ const render = async () => {
             </section>
 
             <section class="choices__wheels options">
-                <h2>Techs</h2>
+                <h2>Wheels</h2>
                 ${wheelOptionsHTML}
             </section>
         </article>

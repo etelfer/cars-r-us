@@ -4,16 +4,32 @@ export const TechOptions = async () => {
     const response = await fetch("http://localhost:8088/techPackages")
     const techPackages = await response.json()
 
-    const techPackagesHTML = techPackages.map((techPackage => {
-        return `<input type="radio" name="techPackage" value=${techPackage.id} /> ${techPackage.package}`
+    document.addEventListener("change", handleTechPackageChoice)
+
+   let techPackageHTML =  `<select id="techPackage">
+        <option value="0">Choose a Tech Package...</option>`
+
+        // set the beginning of the HTML so that it will be a select dropdown menu that firstly displays "Choose a Tech Package"
+    
+    
+    const techPackageOptions = techPackages.map(techPackage => {
+        return `<option value="${techPackage.id}">${techPackage.package}</option>`
     })
-)
-    return techPackagesHTML.join("")
+
+    // created a map function that takes each techPackage and converts it to display as another option in the drop down menu
+
+    techPackageHTML += techPackageOptions.join("")
+
+    // join all of the responses gotten from running our techPackage array through the map function so they all display in the dropdown menu
+
+    techPackageHTML += `</select>`
+
+    return techPackageHTML
 }
 
 const handleTechPackageChoice = (event) => {
 
-    if (event.target.name === "techPackage") {
+    if (event.target.id === "techPackage") {
         setTechChoice(event.target.value)
     }
 }

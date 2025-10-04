@@ -54,3 +54,8 @@ const render = async () => {
     container.innerHTML = composedHTML
 }
 render ()
+
+document.addEventListener("newOrderCreated", event => {
+    console.log("State of data has changed. Regenerating HTML...")
+    render()
+})
